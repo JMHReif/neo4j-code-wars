@@ -7,9 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Relationship;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -20,14 +17,4 @@ public class Country {
     private Long neoId;
     @NonNull
     private String name;
-
-    //@Relationship(type = "LOCATED_IN", direction = "INCOMING")
-    //public List<Customer> customerLocations;
-
-    //@JsonIgnoreProperties("shipCountry")
-    //@Relationship(type="SHIPPED_TO", direction = "INCOMING")
-    //public List<Order> orderLocations;
-
-    //@Relationship(type="LOCATED_IN", direction = "INCOMING")
-    //public List<Employee> employeeLocations;
 }

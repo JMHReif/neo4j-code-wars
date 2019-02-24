@@ -20,13 +20,7 @@ public class Order {
 
     private Integer shipVia;
     private Double freight;
-    private String orderDateStr, requiredDateStr, shippedDateStr, shipName, shipAddress, shipCity, shipRegion, shipPostalCode;
-
-    @Relationship(type="CREATED_BY")
-    public Customer orderCustomer;
-
-    @Relationship(type="MANAGED_BY")
-    public Employee orderEmployee;
+    private String orderDate, requiredDate, shippedDate, shipName, shipAddress, shipCity, shipRegion, shipPostalCode;
 
     @Relationship(type="SHIPPED_TO")
     public Country shipCountry;

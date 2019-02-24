@@ -7,9 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Relationship;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -26,7 +23,4 @@ public class Product {
     private String quantityPerUnit;
     private Double unitPrice;
     private Integer unitsInStock, unitsOnOrder, reorderLevel, discontinued;
-
-    //@Relationship(type="INCLUDES", direction = "INCOMING")
-    //public List<Order> orderedProducts;
 }
