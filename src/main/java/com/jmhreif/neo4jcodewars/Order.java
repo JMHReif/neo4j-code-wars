@@ -1,10 +1,11 @@
 package com.jmhreif.neo4jcodewars;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import org.neo4j.ogm.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
+import org.neo4j.ogm.annotation.GeneratedValue;
+import org.neo4j.ogm.annotation.Id;
+import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
 
 import java.util.List;
 
@@ -18,13 +19,15 @@ public class Order {
     @NonNull
     private Long orderId;
 
+    private String orderDate, requiredDate, shippedDate;
+    private String shipName, shipAddress, shipCity, shipRegion, shipPostalCode;
     private Integer shipVia;
-    private Double freight;
-    private String orderDate, requiredDate, shippedDate, shipName, shipAddress, shipCity, shipRegion, shipPostalCode;
+    private double freight;
 
-    @Relationship(type="SHIPPED_TO")
+    @Relationship(type = "SHIPPED_TO")
     public Country shipCountry;
 
-    @Relationship(type="INCLUDES")
-    public List<Product> orderProducts;
+    @JsonIgnoreProperties("order")
+    @Relationship(type = "INCLUDES")
+    private List<OrderedProduct> orderedProducts;
 }
