@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
     private final OrderRepo orderRepo;
 
-    @GetMapping("/")
+    @GetMapping
     public Iterable<Order> findAllOrders() { return orderRepo.findAll(); }
 
     @GetMapping("/findorderbyid")
