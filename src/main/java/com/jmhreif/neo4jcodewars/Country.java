@@ -4,17 +4,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.neo4j.ogm.annotation.GeneratedValue;
-import org.neo4j.ogm.annotation.Id;
-import org.neo4j.ogm.annotation.NodeEntity;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
 
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-@NodeEntity
-public class Country {
-    @Id @GeneratedValue
+@Node
+class Country {
+    @Id
+    @GeneratedValue
     private Long neoId;
+
     @NonNull
     private String name;
 }
