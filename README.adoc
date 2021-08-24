@@ -1,0 +1,13 @@
+= Neo4j Code Wars Application
+
+This repository accompanies the repositories listed below to connect to Neo4j running in a Docker container and query Northwind sales domain data in the database.
+
+* https://github.com/JMHReif/docker-neo4j[Docker container for Neo4j^]
+* https://github.com/JMHReif/code-wars-import-data-scripts[Northwind data set load scripts^]
+
+== REST endpoints
+
+* localhost:8082/orders/findbyid?orderId=10564
+* localhost:8082/orders/findbyproduct?productName=choco
+* localhost:8082/orders/findbyproduct?productName=coffee
+* localhost:8082/orders/findbyproduct?productName=chocolade
