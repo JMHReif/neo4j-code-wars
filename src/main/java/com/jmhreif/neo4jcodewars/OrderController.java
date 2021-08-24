@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+<<<<<<< Updated upstream
 @AllArgsConstructor
 @RequestMapping("/orders")
 class OrderController {
@@ -19,4 +20,16 @@ class OrderController {
 
     @GetMapping("/findordersbyproduct")
     public Iterable<Order> findOrdersByOrderedProductsContaining(String productName) { return orderRepo.findOrdersByOrderedProductsContaining(productName); }
+=======
+@RequestMapping("/orders")
+@AllArgsConstructor
+public class OrderController {
+    private final OrderRepo orderRepo;
+
+    @GetMapping("/findbyid")
+    Order findByOrderId(Long orderId) { return orderRepo.findByOrderId(orderId); }
+
+    @GetMapping("/findbyproduct")
+    Iterable<Order> findByProductName(String productName) { return orderRepo.findByProductName(productName); }
+>>>>>>> Stashed changes
 }
