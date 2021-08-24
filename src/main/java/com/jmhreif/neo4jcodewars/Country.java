@@ -12,16 +12,10 @@ import org.springframework.data.neo4j.core.schema.Node;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Node
-<<<<<<< Updated upstream
-class Country {
-    @Id
-    @GeneratedValue
-=======
 public class Country {
     @Id
     @GeneratedValue
     @NonNull
->>>>>>> Stashed changes
     private Long neoId;
 
     @NonNull
