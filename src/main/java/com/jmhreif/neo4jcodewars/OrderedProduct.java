@@ -9,7 +9,7 @@ import org.springframework.data.neo4j.core.schema.TargetNode;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @RelationshipProperties
 public class OrderedProduct {
     @Id
