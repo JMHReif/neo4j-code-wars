@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
     private final OrderRepo orderRepo;
 
+    @GetMapping
+    Iterable<Order> findAllOrders() { return orderRepo.findAll(); }
+
     @GetMapping("/findbyid")
     Order findByOrderId(Long orderId) { return orderRepo.findByOrderId(orderId); }
 

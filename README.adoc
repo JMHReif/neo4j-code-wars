@@ -14,6 +14,7 @@ image::src/main/resources/neo4j-model-aug2021.png[]
 == REST endpoints
 
 * localhost:8082/orders/findbyid?orderId=10564
+* localhost:8082/orders/findbyid?orderId=10414
 * localhost:8082/orders/findbyproduct?productName=choco
 * localhost:8082/orders/findbyproduct?productName=coffee
 * localhost:8082/orders/findbyproduct?productName=chocolade
